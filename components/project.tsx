@@ -1,9 +1,9 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, motionValue, useTransform } from "framer-motion";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -14,19 +14,41 @@ export default function Project({
   imageUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.33 1"],
-  });
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const [scrollYProgress, setScrollYProgress] = useState<number>(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (ref.current) {
+        const { top, height } = ref.current.getBoundingClientRect();
+        const offset = window.innerHeight * 1.33; // Your desired offset
+
+        const progress = Math.min(
+          Math.max((top + offset) / (height + offset), 0),
+          1
+        );
+        setScrollYProgress(progress);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // By using motionValue(scrollYProgress), we're converting the plain number scrollYProgress into a MotionValue<number> that is compatible with useTransform.
+  const motionScrollYProgress = motionValue(scrollYProgress);
+
+  const scaleProgress = useTransform(motionScrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgress = useTransform(motionScrollYProgress, [0, 1], [0.6, 1]);
 
   return (
     <motion.div
       ref={ref}
       style={{
-        scale: scaleProgess,
-        opacity: opacityProgess,
+        scale: scaleProgress,
+        opacity: opacityProgress,
       }}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
