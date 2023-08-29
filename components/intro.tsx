@@ -58,19 +58,20 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-light !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-4 px-4 text-xl font-light !leading-[1.5] sm:text-3xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="">Hi, I'm </span>
         <span className="font-bold">Brandon.</span> I'm a{" "}
-        <span className="">full-stack developer</span> with{" "}
-        <span className="font-bold">5 years</span> of experience. I build
-        performant <span className="italic">sites & apps</span>. My focus is{" "}
+        <span className="">software engineer working</span> with{" "}
+        <span className="font-bold">Javascript and Typescript</span> on all
+        things web <span className="italic">and sometimes mobile apps</span>. My
+        focus is on building performant infrastructure and products. I build
+        mostly with{" "}
         <span className="font-bold">
-          React (Next.js), React Native, APIs and Microservices
+          React, React Native, Next JS, MongoDB, Node JS and Express JS
         </span>
-        .
       </motion.h1>
 
       <motion.div

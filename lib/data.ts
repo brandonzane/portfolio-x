@@ -53,7 +53,7 @@ export const experiencesData = [
     title: "Front-End Developer",
     location: "Harare, ZW",
     description:
-      "I'm now a full-stack developer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I'm now an experienced front-end developer (with some fullstack projects under the belt). My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm always open to opportunities.",
     icon: React.createElement(FaReact),
     date: "2020 - present",
   },
@@ -98,9 +98,7 @@ export const skillsData = [
   "Redux",
   "GraphQL",
   "Apollo",
-  "Express",
+  "Express JS",
   "PostgreSQL",
-  "APIs",
-  "Microservices",
   "Framer Motion",
 ] as const;
