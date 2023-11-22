@@ -66,7 +66,6 @@ export const projectsData = [
       "A full stack streaming service built with react. The build time for this project was about 8 hours (which is about 4 days in real world time, accounting for a full-time job)",
     tags: ["React", "Styled Components", "Firebase", "Redux"],
     imageUrl: animePlus,
-    link: "https://github.com/brandonzane/anime-plus",
   },
   {
     title: "Covid Tracker",
@@ -74,7 +73,6 @@ export const projectsData = [
       "A project that still tracks the covid numbers even after the pandemic has died down. The build time for this project was about 2 hours.",
     tags: ["React", "Javascript", "APIs", "Material UI"],
     imageUrl: covidTracker,
-    link: "https://github.com/brandonzane/covid-tracker",
   },
   {
     title: "E-commerce React Native App",
