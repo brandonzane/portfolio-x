@@ -3,7 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import animePlus from "@/public/anime-plus.png";
-import covidTracker from "@/public/covid-tracker.png";
+import tourVicFalls from "@/public/tour-vic-falls.png";
 import ecommerceApp from "@/public/ipad-app.png";
 
 export const links = [
@@ -70,20 +70,24 @@ export const projectsData = [
       "A full stack streaming service built with react. The build time for this project was about 8 hours (which is about 4 days in real world time, accounting for a full-time job)",
     tags: ["React", "Styled Components", "Firebase", "Redux"],
     imageUrl: animePlus,
+    buttonUrl: "https://github.com/brandonzane/anime-plus",
   },
   {
-    title: "Covid Tracker",
+    title: "Tour Vic Falls",
     description:
-      "A project that still tracks the covid numbers even after the pandemic has died down. The build time for this project was about 2 hours.",
-    tags: ["React", "Javascript", "APIs", "Material UI"],
-    imageUrl: covidTracker,
+      "A full-stack booking application for short term rentals as well as restaurants and other activities",
+    tags: ["React", "Typescript", "APIs", "Next JS", "Tailwind", "MongoDB"],
+    imageUrl: tourVicFalls,
+    buttonUrl: "https://github.com/brandonzane/tour-vic-falls",
   },
   {
     title: "E-commerce React Native App",
     description:
       "A fullstack react native ecommerce app with a dashboard to update products and prices.",
-    tags: ["React Native", "SQL", "Supabase"],
+    tags: ["React Native", "SQL", "Supabase", "Expo"],
     imageUrl: ecommerceApp,
+    buttonUrl:
+      "https://play.google.com/store/apps/details?id=com.oreandtar.butchery",
   },
 ] as const;
 

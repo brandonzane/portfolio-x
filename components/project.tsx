@@ -4,6 +4,9 @@ import { useRef, useState, useEffect } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, motionValue, useTransform } from "framer-motion";
+import Link from "next/link";
+import { BsArrowRight } from "react-icons/bs";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -12,9 +15,11 @@ export default function Project({
   description,
   tags,
   imageUrl,
+  buttonUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [scrollYProgress, setScrollYProgress] = useState<number>(0);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,6 +93,17 @@ export default function Project({
         group-even:right-[initial] group-even:-left-40"
         />
       </section>
+      <Link
+        href={buttonUrl}
+        className="group bg-white border-solid border-black border-2 text-black px-7 py-3 mt-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-800 hover:text-white hover:border-white active:scale-105 transition"
+        onClick={() => {
+          setActiveSection("Contact");
+          setTimeOfLastClick(Date.now());
+        }}
+      >
+        View Project{" "}
+        <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+      </Link>
     </motion.div>
   );
 }
