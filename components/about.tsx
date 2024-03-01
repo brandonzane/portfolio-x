@@ -19,27 +19,25 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After leaving University in 2019 where I studied{" "}
-        <span className="font-bold">Computer Science</span>, I decided to pursue
-        my passion for programming. I enrolled into the front-end developer
-        career path on Scrimba.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem, especially if
-        the solution accomplishes a broader mission. My core stack is{" "}
+        After studying computer science, I am concurrently working as a
+        Front-End Engineer at a Zimbabwean company while also working on
+        multiple projects for African and European companies as a freelancer. I
+        specialize in front-end development using{" "}
         <span className="font-bold">
-          React, React Native, Typescript, Prisma, Next.js, Node.js, and
-          MongoDB.
-        </span>{" "}
-        I am always open for{" "}
-        <span className="font-medium">full-time positions</span> as a software
-        developer, or collaborations on new projects.
+          React.js, TypeScript, Next.js and React Native.{" "}
+        </span>
+        Additionally, I proficiently translate design concepts into reality
+        using Figma. My primary focus centers on the creation of user-centric
+        and high-performance web and mobile applications. I excel at
+        incorporating popular CSS frameworks such as Tailwind CSS, MUI and
+        Shadcn to build applications. I have a strong desire to learn and
+        continuously develop my skills and I'm always eager to assimilate new
+        technologies!
       </p>
 
       <p>
         <span className="italic">When I'm not coding</span>, I like to stay
-        active by playing football and field hockey,{" "}
-        <span className="italic font-bold">touching grass,</span> as they say.
+        active by playing football and field hockey.
       </p>
     </motion.section>
   );

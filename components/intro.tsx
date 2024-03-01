@@ -62,16 +62,12 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="">Hi, I'm </span>
-        <span className="font-bold">Brandon.</span> I'm a{" "}
+        <span className="">Hi there, I'm </span>
+        <span className="font-bold">Brandon.</span> I'm a design oriented{" "}
         <span className="">software engineer working</span> with{" "}
         <span className="font-bold">Javascript and Typescript</span> on all
-        things web <span className="italic">and sometimes mobile apps</span>. My
-        focus is on building performant infrastructure and products. I build
-        mostly with{" "}
-        <span className="font-bold">
-          React, React Native, Next JS, MongoDB, Node JS and Express JS
-        </span>
+        things web <span className="italic">and mobile</span>. My focus is on
+        building performant infrastructure and products.
       </motion.h1>
 
       <motion.div
@@ -96,7 +92,7 @@ export default function Intro() {
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/Brandon-CV.pdf"
+          href="/Brandon-Mushori-CV.pdf"
           download
         >
           Download CV{" "}
