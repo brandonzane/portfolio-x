@@ -18,26 +18,22 @@ export default function About() {
       id="about"
     >
       <SectionHeading>About me</SectionHeading>
-      <p className="mb-3">
-        After studying computer science, I am concurrently working as a
-        Front-End Engineer at a Zimbabwean company while also working on
-        multiple projects for African and European companies as a freelancer. I
-        specialize in front-end development using{" "}
+      <p className="mb-3 text-lg">
+        A computer science student furthering my horizons at the University of
+        London, I'm a dedicated Frontend Software Developer creating exceptional
+        digital experiences for small to enterprise companies.{" "}
         <span className="font-bold">
-          React.js, TypeScript, Next.js and React Native.{" "}
-        </span>
-        Additionally, I proficiently translate design concepts into reality
-        using Figma. My primary focus centers on the creation of user-centric
-        and high-performance web and mobile applications. I excel at
-        incorporating popular CSS frameworks such as Tailwind CSS, MUI and
-        Shadcn to build applications. I have a strong desire to learn and
-        continuously develop my skills and I'm always eager to assimilate new
-        technologies!
+          Proficient in React.js, TypeScript, Next.js, and React Native, I
+          develop high-performance web and mobile applications with user-centric
+          design.
+        </span>{" "}
       </p>
-
-      <p>
-        <span className="italic">When I'm not coding</span>, I like to stay
-        active by playing football and field hockey.
+      <p className="mb-3 text-lg">
+        Skilled in translating concepts from Figma and leveraging CSS frameworks
+        like Tailwind CSS, MUI, and Shadcn for visually appealing interfaces.
+        Driven by a passion for continuous learning, I embrace new technologies
+        to stay ahead of the curve. When not coding, I enjoy an active lifestyle
+        through football and field hockey.
       </p>
     </motion.section>
   );

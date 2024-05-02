@@ -61,6 +61,14 @@ export const experiencesData = [
     icon: React.createElement(FaReact),
     date: "2020 - present",
   },
+  {
+    title: "University of London",
+    location: "London, UK",
+    description:
+      "Studying Computer Science with a focus on Software Development and Machine Learning & Artificial Intelligence.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2024 - present",
+  },
 ] as const;
 
 export const projectsData = [
