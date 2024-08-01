@@ -1,4 +1,4 @@
-# Brandon Mushori's Protfolio
+# Brandon Mushori's Portfolio
 
 ## Tech Stack
 <ol>
