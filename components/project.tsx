@@ -96,7 +96,7 @@ export default function Project({
       </section>
       <Link
         href={buttonUrl}
-        className="group bg-white border-solid border-black border-2 text-black px-7 py-3 mt-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-800 hover:text-white hover:border-white active:scale-105 transition"
+        className="group bg-white border-solid border-black border-2 text-black px-7 py-3 mt-2 flex items-center gap-2 rounded-md outline-none focus:scale-110 hover:scale-110 hover:bg-gray-800 hover:text-white hover:border-white active:scale-105 transition"
         onClick={() => {
           setActiveSection("Contact");
           setTimeOfLastClick(Date.now());
