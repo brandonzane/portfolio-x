@@ -7,6 +7,8 @@ import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { LanguageProvider } from "@/context/language-context";
+import LanguageSwitch from "@/components/language-switch";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,14 +31,17 @@ export default function RootLayout({
         <div className="bg-[#64e4df] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#2f8678]"></div>
 
         <ThemeContextProvider>
-          <ActiveSectionContextProvider>
-            <Header />
-            {children}
-            <Footer />
-            <SpeedInsights />
-            <Toaster position="top-right" />
-            <ThemeSwitch />
-          </ActiveSectionContextProvider>
+          <LanguageProvider>
+            <ActiveSectionContextProvider>
+              <Header />
+              {children}
+              <Footer />
+              <SpeedInsights />
+              <Toaster position="top-right" />
+              <ThemeSwitch />
+              <LanguageSwitch />
+            </ActiveSectionContextProvider>
+          </LanguageProvider>
         </ThemeContextProvider>
       </body>
     </html>

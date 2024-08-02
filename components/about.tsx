@@ -4,9 +4,12 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/lib/translations";
 
 export default function About() {
   const { ref } = useSectionInView("About");
+  const { language } = useLanguage();
 
   return (
     <motion.section
@@ -17,23 +20,10 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>About me</SectionHeading>
+      <SectionHeading>{translations[language].about.title}</SectionHeading>
       <p className="mb-3 text-lg">
-        A computer science student furthering my horizons at the University of
-        London, I'm a dedicated Frontend Software Developer creating exceptional
-        digital experiences for small to enterprise companies.{" "}
-        <span className="font-bold">
-          Proficient in React.js, TypeScript, Next.js, and React Native, I
-          develop high-performance web and mobile applications with user-centric
-          design.
-        </span>{" "}
-      </p>
-      <p className="mb-3 text-lg">
-        Skilled in translating concepts from Figma and leveraging CSS frameworks
-        like Tailwind CSS, MUI, and Shadcn for visually appealing interfaces.
-        Driven by a passion for continuous learning, I embrace new technologies
-        to stay ahead of the curve. When not coding, I enjoy an active lifestyle
-        through football and field hockey.
+        {translations[language].about.content}
+        {/* <span className="font-bold"></span>{" "} */}
       </p>
     </motion.section>
   );

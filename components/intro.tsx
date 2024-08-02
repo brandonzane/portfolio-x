@@ -4,15 +4,23 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import {
+  BsArrowRight,
+  BsEnvelope,
+  BsLinkedin,
+  BsMailbox,
+} from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/lib/translations";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const { language } = useLanguage();
 
   return (
     <section
@@ -31,17 +39,17 @@ export default function Intro() {
             }}
           >
             <Image
-              src="https://pbs.twimg.com/profile_images/1757004333235814400/7vYppWSb_400x400.jpg"
+              src="https://pbs.twimg.com/profile_images/1818987025996918784/EUN8UdBL_400x400.jpg"
               alt="Brandon-Mushori-Profile"
               width="192"
               height="192"
               quality="95"
               priority={true}
-              className="h-32 w-32 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="h-32 w-32 rounded-full object-cover border-[0.35rem] border-white shadow-2xl"
             />
           </motion.div>
 
-          <motion.span
+          {/* <motion.span
             className="absolute bottom-0 right-0 text-2xl"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -53,7 +61,7 @@ export default function Intro() {
             }}
           >
             💻
-          </motion.span>
+          </motion.span> */}
         </div>
       </div>
 
@@ -62,15 +70,10 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="">Hi there, I'm </span>
-        <span className="font-bold">Brandon.</span> I'm a Frontend{" "}
-        <span className="">Software Engineer working</span> with{" "}
-        <span className="font-bold">Javascript and Typescript.</span> I build
         <span className="font-bold">
-          {" "}
-          web applications & mobile applications
-        </span>
-        . focussed on high performance, accessibility and smooth user experience
+          {translations[language].intro.greeting}
+        </span>{" "}
+        {translations[language].intro.role}
       </motion.h1>
 
       <motion.div
@@ -82,15 +85,14 @@ export default function Intro() {
         }}
       >
         <Link
-          href="#contact"
+          href="mailto:bmushori@gmail.com"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
-          onClick={() => {
-            setActiveSection("Contact");
-            setTimeOfLastClick(Date.now());
-          }}
         >
-          Contact me here{" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+          {translations[language].intro.contactLink}{" "}
+          <BsEnvelope
+            className="opacity-80 group-hover:translate-x-1 transition"
+            size={22}
+          />
         </Link>
 
         {/* <a
