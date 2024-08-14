@@ -4,7 +4,7 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import animePlus from "@/public/anime-plus.png";
 import tourVicFalls from "@/public/tour-vic-falls.png";
-import ecommerceApp from "@/public/ipad-app.png";
+import carRental from "@/public/Drive.gif";
 
 export const links = [
   {
@@ -61,14 +61,6 @@ export const experiencesData = [
     icon: React.createElement(FaReact),
     date: "2020 - present",
   },
-  {
-    title: "University of London",
-    location: "London, UK",
-    description:
-      "Studying Computer Science with a focus on Software Development and Machine Learning & Artificial Intelligence.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2024 - present",
-  },
 ] as const;
 
 export const projectsData = [
@@ -89,13 +81,12 @@ export const projectsData = [
     buttonUrl: "https://github.com/brandonzane/tour-vic-falls",
   },
   {
-    title: "E-commerce React Native App",
+    title: "Car Rental React Native App",
     description:
-      "A fullstack react native ecommerce app with a dashboard to update products and prices.",
-    tags: ["React Native", "SQL", "Supabase", "Expo"],
-    imageUrl: ecommerceApp,
-    buttonUrl:
-      "https://play.google.com/store/apps/details?id=com.oreandtar.butchery",
+      "A fullstack react native car rental application. Users are meant to be able to rent a car from peers who own vehicles in the country of their chosen destination",
+    tags: ["React Native", "PostgreSQL", "Supabase", "Expo"],
+    imageUrl: carRental,
+    buttonUrl: "https://github.com/brandonzane/car-rental",
   },
 ] as const;
 
